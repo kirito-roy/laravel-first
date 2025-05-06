@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head><title>Home</title></head>
-<body>
-    <h1>Welcome to Laravel!</h1>
-</body>
-</html>
+<x-layout>
+    <x-slot:heading>home</x-slot:heading>
+    <p>sumit</p>
+</x-layout>
