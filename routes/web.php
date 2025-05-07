@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Models\student;
 
 Route::get('/', function () {
-    return view('home');
+    // $user = student::all();
+    // dd($user[1]->name);
+    return view('home',['student' => student::all()]);
 });
 // routes/web.php
 Route::get('/about', function () {
@@ -33,6 +36,16 @@ Route::get('/about', function () {
         ]     
     ]);
 });
-Route::get('/about/{id}', function ($id) {
-    return view('about', ['id' => $id]);
+Route::get('/create', function () {
+    return view('create');
 });
+Route::post('/create', function () {
+    student::create([
+        'name' => request('name'),
+        'email' => request('email')
+    ]);
+    return view('create');
+});
+// Route::get('/about/{id}', function ($id) {
+//     return view('about', ['id' => $id]);
+// });

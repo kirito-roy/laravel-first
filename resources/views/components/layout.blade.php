@@ -22,7 +22,7 @@
 -->
     <div class="min-h-full">
         <nav class="bg-gray-800">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class=" w-full px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="shrink-0">
@@ -36,6 +36,7 @@
 
                                 <x-navigate href="/">home</x-navigate>
                                 <x-navigate href="/about">about</x-navigate>
+                                <x-navigate href="/create">create</x-navigate>
                                 {{-- <a href="#"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
                                 <a href="#"
