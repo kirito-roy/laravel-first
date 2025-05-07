@@ -44,7 +44,7 @@ Route::post('/create', function () {
         'name' => request('name'),
         'email' => request('email')
     ]);
-    return view('create');
+    return view('home',['student' => student::all()]);
 });
 // Route::get('/about/{id}', function ($id) {
 //     return view('about', ['id' => $id]);
